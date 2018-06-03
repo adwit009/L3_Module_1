@@ -94,8 +94,13 @@ public class MoreAndMoreTests {
 	  }
 
 	private boolean isCube(int i) {
-		// TODO Auto-generated method stub
-		return false;
+		 double y =  Math.cbrt(i);	
+		 if (y%1 ==  0) {
+			return true;
+		}
+		 else {
+			return false; 
+		}
 	}
 
 
