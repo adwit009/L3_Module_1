@@ -65,37 +65,71 @@ public class Algorithms {
 		
 	}
 
-//	public static Object sortDNA(List<String> list) {
-//		List<String> copy = list;
-//		int x = list.size();
-//		int storage = 0;
-//		List<String> end = new ArrayList<String>();
-//		String low = copy.get(0);
-//		for (int y = 0; y <copy.size(); y++) {
-//			
-//		for (int i = 0; i < x; i++) {
-//			if (copy.get(i).length()<low.length()) {
-//				low = copy.get(i);
-//				storage = i; 
-//System.out.println(storage + low);
-//			}
-//		}
-//		end.add(low);
-//	copy.remove(storage);
-//		
-//		System.out.println(x + copy.size());
-//		low = copy.get(0);
-//		}
-//		
-//		return end;
-//	}
+	public static Object sortDNA(List<String> list) {
 
-//	public static List<Double> sortScores(List<Double> results) {
-//		// TODO Auto-generated method stub
+		for (int y = 0; y < (list.size()) ; y++) {
+			
+			for (int i = 0; i < list.size()-1; i++) {
+				if (list.get(i).length()>list.get(i+1).length()) {
+					String store = list.get(i);
+					list.set(i, list.get(i+1));
+					list.set(i+1, store);
+			
+			
+				
+				}
+		
+			}
+		}
+		
+		
+		return list;
+	}
+
+	public static List<Double> sortScores(List<Double> list) {
+	for (int y = 0; y < (list.size()) ; y++) {
+			
+			for (int i = 0; i < list.size()-1; i++) {
+				if (list.get(i)>list.get(i+1)) {
+					double store = list.get(i);
+					list.set(i, list.get(i+1));
+					list.set(i+1, store);
+			
+				
+				
+				}
+				
+			}
+		}
+		
+		
+		return list;
+		//different and easier method 
 //		 Collections.sort(results);
 //		
 //		return results;
-//	}
+	}
+
+	public static List<String> sortWords(List<String> list) {
+		for (int y = 0; y < (list.size()) ; y++) {
+			
+			for (int i = 0; i < list.size()-1; i++) {
+				if ((list.get(i)).compareTo(list.get(i+1)) > 0) {
+					String store = list.get(i);
+					list.set(i, list.get(i+1));
+					list.set(i+1, store);
+					for (int j = 0; j < list.size(); j++) {
+						
+						System.out.print(list.get(i));
+					}
+				}
+			System.out.println();
+			}
+		}
+		
+		
+		return list;
+	}
 
 	
 
